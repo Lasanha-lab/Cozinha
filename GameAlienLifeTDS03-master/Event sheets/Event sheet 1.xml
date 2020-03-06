@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet 1</name>
+    <events>
+        <variable constant="0" name="Pontos" sid="787480954578298" static="0" type="number">0</variable>
+        <event-block sid="923181839557797">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="929590664586562" type="System" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="218390092743748" type="Alien">
+                    <param id="0" name="X">100</param>
+                    <param id="1" name="Y">0</param>
+                </action>
+                <action id="4" name="Set animation" sid="432923169502765" type="Alien">
+                    <param id="0" name="Animation">&quot;PARADO&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="937603533882038">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="244946980340088" type="Alien">
+                    <param id="0" name="Object">inimigo</param>
+                </condition>
+            </conditions>
+            <actions />
+        </event-block>
+        <event-block sid="698607845371293">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="295573651459125" type="Alien">
+                    <param id="0" name="Object">Moeda</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="656672941314388" type="Moeda" />
+                <action id="-10" name="Add to" sid="313404255232731" type="System">
+                    <param id="0" name="Variable">Pontos</param>
+                    <param id="1" name="Value">10</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="689440001392367">
+            <conditions>
+                <condition id="-2" name="Compare Y" sid="571365446922869" type="Alien">
+                    <param id="0" name="Comparison">5</param>
+                    <param id="1" name="Y co-ordinate">720</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-21" name="Reset global variables" sid="866272486669242" type="System" />
+                <action id="-26" name="Restart layout" sid="892675112261580" type="System" />
+            </actions>
+        </event-block>
+        <event-block sid="594739204047115">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="952109230850459" type="System">
+                    <param id="0" name="Interval (seconds)">0.1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="131380336812740" type="Placar">
+                    <param id="0" name="Text">&quot;Placar &quot;&amp;Pontos</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="256615964470027">
+            <conditions>
+                <condition id="9" name="Is overlapping at offset" sid="291576851798150" type="Alien">
+                    <param id="0" name="Object">inimigo</param>
+                    <param id="1" name="Offset X">10</param>
+                    <param id="2" name="Offset Y">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-17" name="Move forward" sid="673867706189555" type="inimigo">
+                    <param id="0" name="Distance">10</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="631564818466412">
+            <conditions>
+                <condition id="9" name="Is overlapping at offset" sid="723607784393231" type="Alien">
+                    <param id="0" name="Object">inimigo</param>
+                    <param id="1" name="Offset X">-10</param>
+                    <param id="2" name="Offset Y">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-17" name="Move forward" sid="732703373815046" type="inimigo">
+                    <param id="0" name="Distance">-10</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="833363262321051">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="966743157228271" type="inimigo">
+                    <param id="0" name="Object">base</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-17" name="Move forward" sid="104911602307204" type="inimigo">
+                    <param id="0" name="Distance">-30</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="452857476985524">
+            <conditions />
+            <actions />
+        </event-block>
+        <event-block sid="470419019830159">
+            <conditions />
+            <actions />
+        </event-block>
+        <event-block sid="355132749152315">
+            <conditions />
+            <actions />
+        </event-block>
+    </events>
+</c2eventsheet>

@@ -1,0 +1,220 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>AlienLife</name>
+    <description>Game Alien Life</description>
+    <version>1.0.0.0</version>
+    <author>Victor</author>
+    <author-email></author-email>
+    <author-website>http://</author-website>
+    <app-id>com.senai.alienlife</app-id>
+    <unique-id>204464236bjbk</unique-id>
+    <saved-with-version>27700</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="progressbar" version="1">Progress bar</plugin>
+    </used-plugins>
+    <used-behaviors>
+        <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
+        <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
+        <behavior author="Scirra" id="Rotate" version="1">Rotate</behavior>
+        <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
+        <behavior author="Scirra" id="solid" version="1">Solid</behavior>
+    </used-behaviors>
+    <used-effects />
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>1280</width>
+        <height>720</height>
+    </window-size>
+    <pixel-rounding>0</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <use-loader-layout>0</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">Yes</prop>
+        <prop name="Downscaling">Medium quality</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Fullscreen scaling">High quality</prop>
+        <prop name="Loader style">Construct 2 splash</prop>
+        <prop name="Orientations">Any</prop>
+        <prop name="Pause on unfocus">No</prop>
+        <prop name="Physics engine">Box2D asm.js</prop>
+        <prop name="Preload sounds">Yes</prop>
+        <prop name="Preview browser">(default)</prop>
+        <prop name="Sampling">Linear</prop>
+        <prop name="Use high-DPI display">Yes</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-type name="Alien" sid="415785689484013">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Platform" sid="633153689569658">
+                    <behavior id="Platform" />
+                </behavior-type>
+                <behavior-type name="ScrollTo" sid="815849191082203">
+                    <behavior id="scrollto" />
+                </behavior-type>
+                <behavior-type name="Pin" sid="590086032114055">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="PARADO" pingpong="0" repeatcount="1" repeatto="0" sid="679932501718582" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1.23913" original-source="C:\Users\aluno10\Desktop\Sprite\kenney-platformer-art-base-pack\Player\p1_stand.png">
+                        <collision-poly>
+                            <point x="0.137626" y="0.180861" />
+                            <point x="0.486111" y="0.0721649" />
+                            <point x="0.792929" y="0.180861" />
+                            <point x="0.939394" y="0.489691" />
+                            <point x="0.953283" y="1" />
+                            <point x="0.458333" y="1" />
+                            <point x="0.142677" y="1" />
+                            <point x="0.0277778" y="0.561856" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="11" loop="0" name="Andando" pingpong="0" repeatcount="1" repeatto="0" sid="803875580859047" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.505155" original-source="C:\Users\aluno10\Desktop\Sprite\kenney-platformer-art-base-pack\Player\p1_walk\PNG\p1_walk01.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.505155" original-source="C:\Users\aluno10\Desktop\Sprite\kenney-platformer-art-base-pack\Player\p1_walk\PNG\p1_walk02.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.505155" original-source="C:\Users\aluno10\Desktop\Sprite\kenney-platformer-art-base-pack\Player\p1_walk\PNG\p1_walk03.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.505155" original-source="C:\Users\aluno10\Desktop\Sprite\kenney-platformer-art-base-pack\Player\p1_walk\PNG\p1_walk04.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.505155" original-source="C:\Users\aluno10\Desktop\Sprite\kenney-platformer-art-base-pack\Player\p1_walk\PNG\p1_walk05.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.505155" original-source="C:\Users\aluno10\Desktop\Sprite\kenney-platformer-art-base-pack\Player\p1_walk\PNG\p1_walk06.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.505155" original-source="C:\Users\aluno10\Desktop\Sprite\kenney-platformer-art-base-pack\Player\p1_walk\PNG\p1_walk07.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.505155" original-source="C:\Users\aluno10\Desktop\Sprite\kenney-platformer-art-base-pack\Player\p1_walk\PNG\p1_walk08.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.505155" original-source="C:\Users\aluno10\Desktop\Sprite\kenney-platformer-art-base-pack\Player\p1_walk\PNG\p1_walk09.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.505155" original-source="C:\Users\aluno10\Desktop\Sprite\kenney-platformer-art-base-pack\Player\p1_walk\PNG\p1_walk10.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.505155" original-source="C:\Users\aluno10\Desktop\Sprite\kenney-platformer-art-base-pack\Player\p1_walk\PNG\p1_walk11.png" />
+                </animation>
+                <animation framecount="1" loop="0" name="Pulando" pingpong="0" repeatcount="1" repeatto="0" sid="621580234654793" speed="5">
+                    <frame duration="1" hotspotX="0.507463" hotspotY="0.5" original-source="C:\Users\aluno10\Desktop\Sprite\kenney-platformer-art-base-pack\Player\p1_jump.png" />
+                </animation>
+                <animation framecount="1" loop="0" name="Caindo" pingpong="0" repeatcount="1" repeatto="0" sid="781035636472474" speed="5">
+                    <frame duration="1" hotspotX="0.507246" hotspotY="0.507042" original-source="C:\Users\aluno10\Desktop\Sprite\kenney-platformer-art-base-pack\Player\p1_duck.png">
+                        <collision-poly>
+                            <point x="0.15942" y="0.15493" />
+                            <point x="0.492754" y="0" />
+                            <point x="0.869565" y="0.126761" />
+                            <point x="1" y="0.492958" />
+                            <point x="0.884058" y="0.887324" />
+                            <point x="0.492754" y="0.971831" />
+                            <point x="0.101449" y="0.901408" />
+                            <point x="0.057971" y="0.492958" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="base" sid="565833690476476">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="496235666780649">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="433211247469987" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="inimigo" sid="521579128721661">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="822204284413709">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="174095484295760" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Moeda" sid="298465767684173">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Rotate" sid="671017040461793">
+                    <behavior id="Rotate" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="780577783909825" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\aluno10\Desktop\Sprite\kenney-platformer-art-base-pack\Items\star.png">
+                        <collision-poly>
+                            <point x="0.4" y="0.4" />
+                            <point x="0.5" y="0.285714" />
+                            <point x="0.6" y="0.4" />
+                            <point x="0.7" y="0.5" />
+                            <point x="0.657143" y="0.657143" />
+                            <point x="0.5" y="0.685714" />
+                            <point x="0.342857" y="0.657143" />
+                            <point x="0.3" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="ProgressBar" sid="867273083566002">
+            <plugin id="progressbar" />
+        </object-type>
+        <object-type name="ProgressBar2" sid="916985417367755">
+            <plugin id="progressbar" />
+        </object-type>
+        <object-type name="Placar" sid="932077475833074">
+            <plugin id="Text" />
+            <behaviors>
+                <behavior-type name="Pin" sid="349695338083325">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+        </object-type>
+        <object-type name="ProgressBar3" sid="329271796385325">
+            <plugin id="progressbar" />
+        </object-type>
+        <object-type name="Text2" sid="274343510131511">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Enimigo2" sid="108128582187417">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="687407512646781" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\aluno10\Desktop\Sprite\kenney-platformer-art-base-pack\Enemies\pokerMad.png">
+                        <collision-poly>
+                            <point x="0" y="0.0479452" />
+                            <point x="0.5" y="0" />
+                            <point x="1" y="0.0273973" />
+                            <point x="1" y="0.5" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+    </object-folder>
+    <families />
+    <layout-folder>
+        <layout>Layout 1.xml</layout>
+    </layout-folder>
+    <event-folder>
+        <event-sheet>Event sheet 1.xml</event-sheet>
+    </event-folder>
+    <global-instances />
+    <sounds-folder />
+    <music-folder />
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+    </files-folder>
+</c2project>
