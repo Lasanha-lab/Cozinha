@@ -3,29 +3,27 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Event sheet 1</name>
     <events>
+        <variable constant="0" name="Navex" sid="151763069935221" static="0" type="number">1</variable>
+        <variable constant="0" name="vida" sid="455898485864942" static="0" type="number">3</variable>
         <variable constant="0" name="Pontos" sid="787480954578298" static="0" type="number">0</variable>
         <event-block sid="923181839557797">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="929590664586562" type="System" />
             </conditions>
             <actions>
-                <action id="-3" name="Set position" sid="218390092743748" type="Alien">
-                    <param id="0" name="X">100</param>
-                    <param id="1" name="Y">0</param>
-                </action>
                 <action id="4" name="Set animation" sid="432923169502765" type="Alien">
                     <param id="0" name="Animation">&quot;PARADO&quot;</param>
                     <param id="1" name="From">1</param>
                 </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="534346040458685" type="Placar">
+                    <param id="0" name="Pin to">Alien</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="811698841334991" type="coracao">
+                    <param id="0" name="Pin to">Alien</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
             </actions>
-        </event-block>
-        <event-block sid="937603533882038">
-            <conditions>
-                <condition id="0" name="On collision with another object" sid="244946980340088" type="Alien">
-                    <param id="0" name="Object">inimigo</param>
-                </condition>
-            </conditions>
-            <actions />
         </event-block>
         <event-block sid="698607845371293">
             <conditions>
@@ -45,77 +43,268 @@
             <conditions>
                 <condition id="-2" name="Compare Y" sid="571365446922869" type="Alien">
                     <param id="0" name="Comparison">5</param>
-                    <param id="1" name="Y co-ordinate">720</param>
+                    <param id="1" name="Y co-ordinate">800</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="-21" name="Reset global variables" sid="866272486669242" type="System" />
-                <action id="-26" name="Restart layout" sid="892675112261580" type="System" />
+                <action id="-3" name="Set position" sid="892675112261580" type="Alien">
+                    <param id="0" name="X">0</param>
+                    <param id="1" name="Y">100</param>
+                </action>
+                <action id="-11" name="Subtract from" sid="863026307464870" type="System">
+                    <param id="0" name="Variable">vida</param>
+                    <param id="1" name="Value">1</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="594739204047115">
             <conditions>
                 <condition id="-6" name="Every X seconds" sid="952109230850459" type="System">
-                    <param id="0" name="Interval (seconds)">0.1</param>
+                    <param id="0" name="Interval (seconds)">0.01</param>
                 </condition>
             </conditions>
             <actions>
                 <action id="0" name="Set text" sid="131380336812740" type="Placar">
-                    <param id="0" name="Text">&quot;Placar &quot;&amp;Pontos</param>
+                    <param id="0" name="Text">Pontos</param>
                 </action>
-            </actions>
-        </event-block>
-        <event-block sid="256615964470027">
-            <conditions>
-                <condition id="9" name="Is overlapping at offset" sid="291576851798150" type="Alien">
-                    <param id="0" name="Object">inimigo</param>
-                    <param id="1" name="Offset X">10</param>
-                    <param id="2" name="Offset Y">0</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-17" name="Move forward" sid="673867706189555" type="inimigo">
-                    <param id="0" name="Distance">10</param>
+                <action id="5" name="Set frame" sid="108089358719293" type="coracao">
+                    <param id="0" name="Frame number">vida</param>
                 </action>
-            </actions>
-        </event-block>
-        <event-block sid="631564818466412">
-            <conditions>
-                <condition id="9" name="Is overlapping at offset" sid="723607784393231" type="Alien">
-                    <param id="0" name="Object">inimigo</param>
-                    <param id="1" name="Offset X">-10</param>
-                    <param id="2" name="Offset Y">0</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-17" name="Move forward" sid="732703373815046" type="inimigo">
-                    <param id="0" name="Distance">-10</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="833363262321051">
-            <conditions>
-                <condition id="0" name="On collision with another object" sid="966743157228271" type="inimigo">
-                    <param id="0" name="Object">base</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-17" name="Move forward" sid="104911602307204" type="inimigo">
-                    <param id="0" name="Distance">-30</param>
+                <action id="-17" name="Move forward" sid="747879525602928" type="nuvem">
+                    <param id="0" name="Distance">1</param>
                 </action>
             </actions>
         </event-block>
         <event-block sid="452857476985524">
-            <conditions />
-            <actions />
+            <conditions>
+                <condition behavior="Platform" id="0" name="Is moving" sid="737730467055766" type="Alien" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="546648854340689" type="Alien">
+                    <param id="0" name="Animation">&quot;Andando&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="290694032629500">
+            <conditions>
+                <condition id="-22" name="Else" sid="403775225499572" type="System" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="908420178923818" type="Alien">
+                    <param id="0" name="Animation">&quot;PARADO&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
         </event-block>
         <event-block sid="470419019830159">
-            <conditions />
-            <actions />
+            <conditions>
+                <condition behavior="Platform" id="3" name="Is jumping" sid="840499279221415" type="Alien" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="607611681338601" type="Alien">
+                    <param id="0" name="Animation">&quot;Pulando&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
         </event-block>
         <event-block sid="355132749152315">
-            <conditions />
+            <conditions>
+                <condition behavior="Platform" id="4" name="Is falling" sid="969429929649561" type="Alien" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="470632862722218" type="Alien">
+                    <param id="0" name="Animation">&quot;Caindo&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="636086975712550">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="643733995045604" type="Keyboard">
+                    <param id="0" name="Key">37</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="7" name="Set mirrored" sid="264864245248936" type="Alien">
+                    <param id="0" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="260075104850496">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="219032399301042" type="Keyboard">
+                    <param id="0" name="Key">39</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="7" name="Set mirrored" sid="930687437036492" type="Alien">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="160669371025803">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="146908575989724" type="Alien">
+                    <param id="0" name="Object">Enimigo2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="11" name="Set collisions enabled" sid="503552620740512" type="Enimigo2">
+                    <param id="0" name="Collisions">1</param>
+                </action>
+                <action id="-11" name="Subtract from" sid="434678984899768" type="System">
+                    <param id="0" name="Variable">vida</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-17" name="Move forward" sid="599852564237017" type="Enimigo2">
+                    <param id="0" name="Distance">50</param>
+                </action>
+                <action id="-17" name="Move forward" sid="351469395780463" type="Alien">
+                    <param id="0" name="Distance">-50</param>
+                </action>
+                <action id="-18" name="Rotate clockwise" sid="785781546777867" type="Enimigo2">
+                    <param id="0" name="Degrees">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="615602673068757">
+            <conditions>
+                <condition id="9" name="Is overlapping at offset" sid="865537850738949" type="Alien">
+                    <param id="0" name="Object">Enimigo2</param>
+                    <param id="1" name="Offset X">0</param>
+                    <param id="2" name="Offset Y">5</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="496707709270958" type="Enimigo2" />
+                <action id="-10" name="Add to" sid="718749702373375" type="System">
+                    <param id="0" name="Variable">vida</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-23" name="Move at angle" sid="391526666237748" type="Alien">
+                    <param id="0" name="Angle">90</param>
+                    <param id="1" name="Distance">-10</param>
+                </action>
+                <action id="-30" name="Set from JSON" sid="624719186324271" type="Alien">
+                    <param id="0" name="JSON">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="378855545854024">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="774245372480778" type="System">
+                    <param id="0" name="Variable">vida</param>
+                    <param id="1" name="Comparison">2</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="350163263504076" type="Alien" />
+                <action id="-16" name="Wait" sid="678639439261959" type="System">
+                    <param id="0" name="Seconds">2</param>
+                </action>
+                <action id="-21" name="Reset global variables" sid="952027568144931" type="System" />
+                <action id="-26" name="Restart layout" sid="245748189923828" type="System" />
+            </actions>
+        </event-block>
+        <event-block sid="410580878027180">
+            <conditions>
+                <condition id="-1" name="Compare X" sid="188608654120842" type="nuvem">
+                    <param id="0" name="Comparison">0</param>
+                    <param id="1" name="X co-ordinate">10000</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-1" name="Set X" sid="164472244460038" type="nuvem">
+                    <param id="0" name="X">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="909684764794035">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="384279554699138" type="System">
+                    <param id="0" name="Interval (seconds)">0.01</param>
+                </condition>
+            </conditions>
             <actions />
+            <sub-events>
+                <event-block sid="175695132855692">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="548909106989041" type="System">
+                            <param id="0" name="Variable">Navex</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-17" name="Move forward" sid="957632651059361" type="nave">
+                            <param id="0" name="Distance">-1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="952304792713983">
+                    <conditions />
+                    <actions />
+                    <sub-events>
+                        <event-block sid="105701896769260">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="320280685670989" type="System">
+                                    <param id="0" name="Variable">Navex</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-17" name="Move forward" sid="453854123992814" type="nave">
+                                    <param id="0" name="Distance">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="463259753587848">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="899744401422482" type="nave">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="X co-ordinate">600</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="494582081067494" type="System">
+                            <param id="0" name="Variable">Navex</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="960543880392589">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="832943044278575" type="nave">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="X co-ordinate">400</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Subtract from" sid="949115733925322" type="System">
+                            <param id="0" name="Variable">Navex</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="414065037104608">
+            <conditions>
+                <condition id="2" name="Mouse button is down" sid="796499910724357" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="503082926220203" type="Alien">
+                    <param id="0" name="Animation">&quot;tele&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
         </event-block>
     </events>
 </c2eventsheet>
